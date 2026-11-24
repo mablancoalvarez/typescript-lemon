@@ -70,7 +70,7 @@ console.log(fromCSV(data, 4)); // cada usuario tendrá sólo `id`, `name`, `surn
 #### Solución
 
 ```js
-// versión original
+// versión uno
 const fromCSV = (csv) => {
   const [header, ...rows] = csv.split('\n');
   const people = [];
@@ -86,7 +86,7 @@ const fromCSV = (csv) => {
 ```
 
 ```js
-// versión con nAttrs
+// versión extra
 const fromCSV = (csv, nAttrs) => {
   const [header, ...rows] = csv.split('\n').filter((line) => line !== '');
   const allKeys = header.split(',');
